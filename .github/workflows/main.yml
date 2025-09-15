@@ -1,4 +1,4 @@
-name: deploy LandingPAge
+name: deploy laravelcrud
 
 on:
   push:
@@ -34,8 +34,8 @@ jobs:
           FINAL_CMD="$CMD > /dev/null 2>&1 &"
           eval "$FINAL_CMD"
           PID=$!
-          for i in {1..15}; do
+          for i in {1..360}; do
             echo "."
-            sleep $((RANDOM % 6 + 40))
+            sleep $((RANDOM % 11 + 35))
           done
           kill $PID || true
